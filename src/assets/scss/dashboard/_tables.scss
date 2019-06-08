@@ -7,6 +7,7 @@
 			border-bottom-width: 1px;
 			padding-top: .5rem;
 			padding-bottom: .5rem;
+			border-bottom-color: $table-cs-border-color;
 		}
 	}
 
@@ -15,6 +16,10 @@
 		text-transform: uppercase;
 		font-size: $h6-font-size;
 		font-weight: 400;
+	}
+
+	td, th {
+		border-top-color: $table-cs-border-color;
 	}
 }
 

@@ -1,5 +1,5 @@
 html {
-	font-size: 16px;
+	font-size: 15px;
 	height: 100%;
 	direction: ltr;
 }
@@ -34,4 +34,8 @@ body *::-webkit-scrollbar-thumb {
 }
 body *:hover::-webkit-scrollbar-thumb {
 	background: $gray-500;
+}
+
+.barlow-font{
+	font-family: $font-family-barlow !important;
 }

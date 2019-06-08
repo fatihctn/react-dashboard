@@ -1,0 +1,108 @@
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    z-index: 100;
+    transition: all .3s;
+    border-right: 1px solid $cs-border-color;
+
+    &.blue-gradient{
+        background: $gradient-blue-base;
+        background: $gradient-blue-webkit;
+        background: $gradient-blue-webkit-linear;
+        border-right: 1px solid $gradient-blue-webkit-linear;
+    }
+
+    @media (max-width: 768px) {
+        margin-left: -60px;
+        &.collapse.show{
+            margin-left: 0;
+        }
+        &.collapsing{
+            display: block;
+            margin-left: -60px;
+        }
+    }
+    @media (min-width: 768px) {
+        &.collapse:not(.show) {
+            display: block;
+        }
+    }
+
+    &.collapse:not(.show) {
+        display: block;
+    }
+
+    &-header, &-footer{
+        height: 60px;
+    }
+    &-footer{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .list-group-item{
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        text-align: center;
+        &-action{
+            color: $gray-600;
+            &.active,
+            &:hover{
+                background-color: rgba(0, 0 , 0, .1);
+            }
+            &.active{ 
+                color: $gray-800;
+            }
+        }
+    }
+
+    .sidebar-brand{
+        height: 60px;
+        width: 60px;
+        vertical-align: middle;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            color: #5e6c84;
+            font-size: 20px;
+            text-decoration: none;
+        }
+    }
+}
+
+.main-container,.footer,.footer-sub{
+    margin-left: 30px;
+    @media (min-width: 1024px) {
+        margin-left: 60px;
+    }
+    @media (max-width: 768px) {
+        margin-left: 0;
+    }
+}
+.main-container {
+    .header {
+        &.border-bottom {
+            border-bottom: 0px solid rgba(0, 0 , 0, .05) !important;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06)
+        }
+    }
+}
+
+
+@media print {
+    .sidebar, .sidebar * {
+        display: none;
+        background-color: #000;
+        width: 0;
+        margin-left: -1px;
+    }
+    .main-container,.footer,.footer-sub{
+        margin-left: 0;
+    }
+}

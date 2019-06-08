@@ -1,8 +1,10 @@
 .card {
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.09);
 	position: relative;
 	margin-bottom: 1.5rem;
 	width: 100%;
+	// border: 1px solid $cs-border-color;
+	border: none;
 
 	.card {
 		box-shadow: none;
@@ -21,7 +23,7 @@
 	position: relative;
 
 	& + & {
-		border-top: 1px solid $border-color;
+		border-top: 1px solid $cs-border-color;
 	}
 
 	> :last-child {
@@ -44,7 +46,7 @@
 }
 
 .card-footer {
-	border-top: 1px solid $border-color;
+	border-top: 1px solid $cs-border-color;
 	color: $text-muted-dark;
 }
 
@@ -54,6 +56,7 @@
 	display: flex;
 	min-height: 3.5rem;
 	align-items: center;
+	border-bottom-color: $cs-border-color;
 
 	.card-title {
 		margin-bottom: 0;
@@ -129,7 +132,7 @@
 	}
 
 	.card-body + & {
-		border-top: 1px solid $border-color;
+		border-top: 1px solid $cs-border-color;
 	}
 }
 
@@ -157,7 +160,7 @@
 
 .card-list-group {
 	.card-body + & {
-		border-top: 1px solid $border-color;
+		border-top: 1px solid $cs-border-color;
 	}
 
 	.list-group-item {
@@ -314,7 +317,7 @@ Card tabs
 .card-tabs-bottom {
 	.card-tabs-item {
 		border: 0;
-		border-top: 1px solid $border-color;
+		border-top: 1px solid $cs-border-color;
 
 		&.active {
 			border-top-color: #fff;
@@ -326,7 +329,7 @@ Card tabs
 	flex: 1 1 auto;
 	display: block;
 	padding: 1rem $card-spacer-x;
-	border-bottom: 1px solid $border-color;
+	border-bottom: 1px solid $cs-border-color;
 	color: inherit;
 	overflow: hidden;
 
@@ -349,7 +352,7 @@ Card tabs
 	}
 
 	& + & {
-		border-left: 1px solid $border-color;
+		border-left: 1px solid $cs-border-color;
 	}
 }
 
@@ -364,7 +367,7 @@ Card status
 	right: -1px;
 	height: 3px;
 	border-radius: $card-border-radius $card-border-radius 0 0;
-	background: $border-color;
+	background: $cs-border-color;
 }
 
 .card-status-left {
